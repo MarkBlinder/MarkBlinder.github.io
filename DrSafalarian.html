@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<title>Dr. Safalarian</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<style>
+    #profName {
+        -webkit-clip-path: polygon(100% 0, 93% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+        clip-path: polygon(100% 0, 93% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+    }
+
+	#bridgeBtn {
+		padding: 5px;
+	}
+
+	#bridgeBtn:hover {
+		box-shadow:0 6px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	
+	#bridge {
+		border: 6px solid #FFFFFF;
+		height:50%; 
+		float:left;
+        margin-right: 20px;
+		margin-bottom:10px;
+		box-shadow:0 6px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        position: relative;
+        z-index: 10;
+	}
+
+    .w3-btn {
+        box-shadow:0 6px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .extra {
+        display: none;
+    }
+
+    .showExtra {
+        display: block;
+    }
+
+	.fakeLines {
+		background-color:rgba(0,128,128,0.50);
+		align:center;
+		width:90%;
+		height:2px;
+	}
+
+    .affix{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        height: 10%;
+        padding-left: 8px;
+    }
+
+	body{
+		background-image: linear-gradient(360deg, #009688 0%, #ffffff 100%);
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+
+	a:hover, a:visited, a:link, a:active{
+		text-decoration: none;
+	}
+
+    .defaultWidth {
+        max-width: 60%; 
+        margin: auto;
+    }
+
+    .contentMed {
+        max-width: 80%; 
+        margin: auto;
+    }
+
+    .contentSmall {
+        width: 100%; 
+        margin: auto;
+    }
+
+	.logo {
+		img: url(images/MiraCosta.png);
+	}
+
+	header {
+		position:relative;
+		top:0;
+		z-index: -1;
+		display:block;
+		padding: 10px;
+		height: 100px;
+		width: 100px;
+	}
+
+    html,body,h1,h2,h3,h4,h5,h6 {
+        font-family: "Roboto", sans-serif
+    }
+</style>
+
+<body class="w3-light-grey">
+	<img src="images/MiraCosta.png" style="padding-top: 1%;width:20%; margin-left:auto; margin-right:auto; display:block" alt="Logo of MiraCosta College">
+    
+    <!-- Page Container -->
+    <div class="w3-margin-top content defaultWidth">
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+            <!-- Left Column -->
+            <div class="w3-third leftSide">
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                        <img src="images/Dr.Safaralian2.jpg" style="width:100%" alt="Picture of Leila Safaralian">
+                        <div class="w3-display-bottomleft w3-container w3-text-white">
+                            <h2 id="profName" style="padding-right:25px; margin-left: -15px; padding-left: 5px; background-color: rgba(80,80,80,0.50)">Dr. Leila Safaralian</h2>
+                        </div>
+                    </div>
+                    <div class="w3-container">
+                        <p>
+                            <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Chair of Mathematics Department
+                        </p>
+                        <p>
+                            <i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Director and Faculty in Charge of the Bridge to Success
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>lsafaralian@miracosta.edu
+                        </p>
+                        <p>
+                            <i class="fa  fa-folder fa-fw w3-text-teal w3-large w3-margin-right"></i>Office: OC 3617
+                        </p>
+                        <p>
+                            <em class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></em>760.757.2121 ext. 6304
+                        </p>
+                        
+                        <hr class="fakeLines">
+    			
+                        <p class="w3-large">
+                            <b><i class="fa fa-book fa-fw w3-margin-right w3-text-teal"></i>Education</b>
+                        </p>
+                        <p>Doctorate in Educational Leadership <br> &bull; University of California San Diego</p>
+                        <hr style="margin-bottom: -5px; margin-top: -5px;">
+                        <p>Masters in Mathematics <br> &bull; California State University San Marcos</p>
+                        <hr style="margin-bottom: -5px; margin-top: -5px;">
+                        <p>Bachelors in Economics <br> &bull; Azad University, Tehran, Iran</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Left Column -->
+
+            <!-- Right Column -->
+            <div class="w3-twothird rightSide">
+                <!-- Classes -->
+                <div class="w3-container w3-card w3-white w3-margin-bottom" style="padding-bottom: 4%; align-content:center">
+                    <div>
+			             <h2 id="fall2018" class="w3-text-grey" style="padding-top:2%"><i class="fa fa-cloud fa-fw w3-xxlarge w3-text-teal w3-margin-right"></i>Fall 2018 Classes</h2>
+                    </div>
+                    <div class="w3-container" style="align-content: center; margin: auto; width: 85%">
+                        <div class="w3-btn w3-teal w3-container w3-opacity" style="width:100%">
+                            <h5 class="" style="padding-top:1%; align-content:center;"><b>Math 64-32 | Intermediate Algebra</b></h5>
+                            <h5 class="" style="padding-bottom:1% "> Click here for Syllabus</h5>
+                        </div>
+                        <hr>
+                        <div class="w3-btn w3-teal w3-container w3-opacity" style="width:100%; align-content:center">
+                            <h5 class="" style="padding-top:1%; align-content:center;"><b>Math 126 | Pre-Calculus I</b></h5>
+                            <h5 class="" style="padding-bottom:1% "> Click here for Syllabus</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bridge to success -->
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16">
+                        <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Bridge to Success Program
+                    </h2>
+                    <div class="w3-container w3-margin-bottom">
+                        <a href="http://www.miracosta.edu/instruction/mathematics/bridgetosuccess.html" target="_blank"><img id="bridge" src="images/bridgeToSuccess.jpg" alt="Bridge To Success out of rocks"></a>
+                        <h5 class="w3-opacity w3-text-teal">
+                            <b>
+                                <a id="bridgeBtn" href="http://www.miracosta.edu/instruction/mathematics/bridgetosuccess.html">Math 64 Program</a>
+                            </b>
+                       </h5>
+                       <p class="w3-opacity">At MiraCosta College, we are committed to student success. That's why free programs like the Bridge to Success in Math 64 Program are so beneficial for students who need to brush up on their Intermediate Algebra/Algebra 2 math skills.</p>
+                    </div>
+                </div>
+                <!-- Student Resources -->
+                <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Student Resources</h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.edu/studentservices/stem/resources.html" target="_blank">STEM Center</a></b></h5>
+                        <p class="w3-opacity">
+                            The STEM Center is located on the Oceanside campus and supports all students in STEM courses.  The STEM Center offers free Drop-In Tutoring for many courses in biology, biotechnology, chemistry, physics, and physical science.  The STEM Center also hosts Drop-In Counseling hours, group study rooms (reserve online), laptops, molecular models, and many textbooks for STEM Center usage.  Many STEM Workshops are offered to help students succeed in their STEM courses and explore career/job opportunities in STEM related fields.  
+                            <br>
+                            <br>Location: OC 1200.
+                            <br>Phone number: 760.757.2121 ext. 6388
+                        </p>
+                    </div>
+                    <hr style="width: 85%; margin: auto">
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.edu/instruction/mathematics/mlc/index.html" target="_blank">Math Learning Center</a></b></h5>
+                        <p class="w3-opacity">
+                            The MLC is open to all math students at MiraCosta.  Services include drop-in tutoring, computerized tutorials, and homework help.  Calculators, textbooks, and headphones are available for use in the MLC.
+                        </p>
+                        <div class="w3-third w3-opacity" style="font-size: 14px">
+                            <p>
+                                Oceanside: BLDG. 1200
+                                <br>Phone number: 760.757.2121<br>ext. 6381
+                    			<br>
+                    			<br>
+                                M – TH: 8:00 am – 9:00 pm 
+                    			<br>Friday: 8:00 am – 3:00 pm 
+                    			<br>Saturday: 12:00 pm-5:00 pm 
+                    			<br>Sunday: Closed
+                            </p>
+                        </div>
+                        <div class="w3-third w3-opacity" style="font-size: 14px">
+                            <p>
+                    			San Elijo: BLDG. 100 
+                    			<br>Phone number: 760.757.2121<br>ext. 7781
+                    			<br>
+                    			<br>
+                    			M – TH: 9:00 am – 8:00 pm
+                    			<br>Friday: 9:00 am – 3:00 pm
+                    			<br>Saturday/Sunday: Closed
+                    		</p>
+                        </div>
+                        <div class="w3-third w3-opacity" style="font-size: 14px">
+                    		<p>
+                    			Community Learning Center: Room 136 
+                    			<br>Phone number: 760.757.2121<br> ext. 8843 
+                    			<br>
+                    			<br>M – F: 8 am – 1 pm Saturday/Sunday: Closed
+                    		</p>
+                        </div>
+                    </div>
+                    <hr style="width: 85%; margin: auto">
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.edu/instruction/distanceeducation/onlineclasstips.html" target="_blank">Tutoring Services</a></b></h5>
+                        <p class="w3-opacity">
+                            The MiraCosta College tutoring program provides academic assistance free of charge if you are enrolled in either day or evening credit classes. Tutors are available by appointment for individual (one-to-one) help and on a drop-in basis (visit the tutoring center to view the current drop-in schedule). Appointment sessions usually last 50 minutes and are arranged for the student and tutor at a mutually convenient time. Additional sessions may be requested as needed. 
+                            <br>
+                            <br>Oceanside: 760.795.6682
+                            <br>San Elijo: 760.944.4449 ext. 7748
+                        </p>
+                    </div>
+                    <hr style="width: 85%; margin: auto">
+                    <div class="w3-container hidden" style="display: none;">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.edu/instruction/distanceeducation/onlineclasstips.html" target="_blank">Disabled Students</a></b></h5>
+                        <p class="w3-opacity">
+                            The MiraCosta College tutoring program provides academic assistance free of charge if you are enrolled in either day or evening credit classes. Tutors are available by appointment for individual (one-to-one) help and on a drop-in basis (visit the tutoring center to view the current drop-in schedule). Appointment sessions usually last 50 minutes and are arranged for the student and tutor at a mutually convenient time. Additional sessions may be requested as needed.
+                            <br> 
+                            <br>Oceanside: 760.795.6682
+                            <br>San Elijo: 760.944.4449 ext. 7748
+                        </p>
+                    </div>
+                    <hr class="hidden" style=" display: none; width: 85%; margin: auto">
+                    <div class="w3-container hidden" style="display: none;">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.edu/studentservices/lgbtqia/safespace.html" target="_blank">LGBTQIA Safe Space Program</a></b></h5>
+                        <p class="w3-opacity">
+                            MiraCosta College has an expressed commitment to equity and inclusion for students, faculty, and staff members who are lesbian, gay, bisexual,transgender, queer, questioning, intersex, and asexual. The district employs a Campus Liaison for LGBTQIA+ Needs, offersLGBTQIA Safe Space training, and has multiple student scholarships for members and active allies of the LGBTQIA+ community. 
+                            <br> 
+                            <br>Oceanside/ San Elijo: 760.765.6460
+                        </p>
+                    </div>
+                    <hr class="hidden" style=" display: none; width: 85%; margin: auto">
+                    <div class="w3-container hidden" style="display: none;">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.edu/studentservices/veteransservices/index.html" target="_blank">Veteran Services</a></b></h5>
+                        <p class="w3-opacity">
+                            The Veterans Education Office, located in Building 3300, provides assistanceto veterans and dependents wishing to use their educational benefits at MiraCosta College.The Veterans Information Center, located in Building T-100, provides a place for students to find resources on VA educational benefits, MiraCosta Student Services, and community organizations that are dedicated to assisting veterans. The center also provides a place for students to relax, study, and meet with friends. The Veteran Peer Advisors are also available. Resources are available on a variety of issues, including employment, counseling, housing, and healthcare.
+                            <br> 
+                            <br>3300 Building: P 760.757.2121 x6285
+							<br>T100 Building: P 760.757.2121 x6981
+                        </p>
+                    </div>
+                    <hr class="hidden" style=" display: none; width: 85%; margin: auto">
+                    <div class="w3-container hidden" style="display: none;">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class="w3-btn w3-teal w3-opacity"><b><a href="http://www.miracosta.cc.ca.us/studentservices/counseling/index.html" target="_blank">Counseling Services</a></b></h5>
+                        <p class="w3-opacity">
+                            The Counseling Center offers individualized academic, career, and personal counseling to assist both prospective and current students in developing their educational programs, coordinating their career and academic goals, and understanding graduation, major, certificate, and transfer requirements. 
+                            <br> 
+                            <div class="w3-third w3-opacity" style="font-size: 14px">
+                                <p>
+                                    Oceanside: BLDG. 3700 
+                                    <br>Phone number: 760.795.6670
+                                    <br>
+                                </p>
+                            </div>
+                            <div class="w3-third w3-opacity" style="font-size: 14px">
+                                <p>
+                                    San Elijo: Administration Building 
+                                    <br>Phone number: 760.634.7811
+                                    <br>
+                                </p>
+                            </div>
+                        </p>
+                    </div>
+                    <hr class="hidden" style=" display: none; width: 85%; margin: auto">
+				    <div class="w3-container hidden" style="display: none;">
+                        <h5 class="w3-opacity"></h5>
+                        <h5 class= "w3-text-teal w3-opacity"><b>Additional Links</b></h5>
+                        <p class="w3-opacity">
+                            <a href="http://catalog.miracosta.edu/studentsupportservices/foodpantry/" target="_blank">Food Pantry</a>
+                            <br> 
+							<a href="http://www.miracosta.edu/studentservices/healthservices/index.html" target="_blank">Health Services</a>
+							<br>
+							<a href="http://www.miracosta.edu/studentservices/healthservices/index.html" target="_blank">Textbook Loan Program</a>
+							<br>
+							<a href="http://www.miracosta.edu/studentservices/Puente/index.html" target="_blank">Puente</a>
+							<br>
+                 			<a href="http://www.miracosta.edu/studentservices/eops/umoja.html" target="_blank">Umoja</a>
+							<br>
+							<a href="http://www.miracosta.edu/studentservices/eops/raffy.html" target="_blank">RAFFY</a>
+                        </p>
+                    </div>
+                    <hr class="hidden" style=" display: none; width: 85%; margin: auto">
+                    <div id="showButton" style="padding-top: 15px; padding-bottom: 15px; width: 100%; text-align: center;">
+                        <button id="innerButton" class="w3-btn">Show More</button>
+                    </div>
+                </div>
+                <!-- End Right Column -->
+            </div>
+            <!-- End Grid -->
+        </div>
+        <!-- End Page Container -->
+    <footer style="padding:5%; width:100%">
+        <p style="color: white; text-align: center;">
+            Designed by WICS <br> 
+            Powered by <a href="https://www.w3schools.com/w3css/w3css_templates.asp" target="_blank">W3.CSS</a>
+        </p>
+    </footer>
+
+    <script>
+        var stickySidebar = $('.leftSide').offset().top;
+        var screen = $(window);
+
+        console.log(screen.height());
+
+        if (screen.width() < 1080) {
+            $('.content').removeClass('defaultWidth');
+            $('.content').addClass('contentMed');
+        }
+        if (screen.width() < 800) {
+            $('.content').removeClass('defaultWidth');
+            $('.content').removeClass('contentMed');
+            $('.content').addClass('contentSmall');
+        }
+
+        $("#showButton").click(function() {
+            if ($(".hidden").is(":hidden")) {
+                $(".hidden").slideDown("medium");
+                $("#innerButton").html("Show Less"); 
+            }
+            else {
+                $(".hidden").slideUp("medium");
+				$("#innerButton").html("Show More");
+            }
+        });
+
+        $(window).scroll(function() {  
+            if ((screen.width() > 800) && (screen.height() > 919)) {
+                if ($(window).scrollTop() > stickySidebar) {
+                    $('.leftSide').addClass('affix');
+                    $('.rightSide').addClass('moveRightThrid');
+                }
+                else {
+                    $('.leftSide').removeClass('affix');
+                    $('.rightSide').removeClass('moveRightThrid');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
